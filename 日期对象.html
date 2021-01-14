@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 如何实例化日期对象
+        // Date（） 实例化日期对象
+        // 参数：任意时间的日期字符
+        var date = new Date('2000-11-10 12:00:00');
+        console.log(date);
+        console.dir(date);
+        // 如何获取当前时间？
+        var nowDate = new Date();
+        console.dir(nowDate);
+
+        // 日期对象下有是什么属性呢？
+        // getDate getDay ... 获取 年 月 日 时 分 秒
+        var year = nowDate.getFullYear();
+        console.log('年', year);
+        // 注意 月份返回值从0-11 需要+1
+        var mount = nowDate.getMonth() + 1; //0-11
+        console.log('月', mount);
+        var da = nowDate.getDate();
+        console.log('日', da);
+        var day = nowDate.getDay(); // 0-6
+        console.log('星期', day);
+        var hour = nowDate.getHours();
+        console.log('时', hour);
+        var minute = nowDate.getMinutes();
+        console.log('分', minute);
+        var second = nowDate.getSeconds();
+        console.log('秒', second);
+        var mill = nowDate.getMilliseconds();
+        console.log('毫秒', mill);
+        var time = nowDate.getTime();
+        console.log('毫秒数', time);
+        var zone = nowDate.getTimezoneOffset();
+        console.log('差数', zone);
+
+        //2020
+    </script>
+</body>
+
+</html>

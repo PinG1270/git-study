@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [
+            ['1', 1, 2, 3, 4, 5, 6],
+            ['3', 1, 2, 3, 4, 5, 326],
+            ['4', 1, 2, 3, 4544, 5, 6],
+            ['7', 1, 2, 3, 4, 5, 6],
+        ];
+        // 多维数组的遍历？
+        // 循环嵌套方式 遍历多维数组
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     // console.log(arr[i]);
+        //     var data = arr[i];
+        //     console.log(data, i, arr[i]);
+        //     for (var j = 0; j < data.length; j++) {
+        //         console.log(data[j]);
+        //     }
+        // }
+
+        var products = [
+            [{
+                name: '苹果',
+                price: 3
+            }, {
+                name: '粒子',
+                price: 21
+            }],
+            [{
+                name: '苹果',
+                price: 3
+            }, {
+                name: '粒子',
+                price: 21
+            }],
+            [{
+                name: '苹果',
+                price: 3
+            }, {
+                name: '粒子',
+                price: 21
+            }],
+            [{
+                name: '苹果',
+                price: 3
+            }, {
+                name: '粒子',
+                price: 21
+            }],
+        ];
+        for (var i = 0; i < products.length; i++) {
+            products[i]
+            for (var j = 0; j < products[i].length; j++) {
+                // console.log(products[i][j].name);
+                var name = products[i][j].name;
+                var price = products[i][j].price
+                    // ``模板字符串，${变量}
+                document.write(`
+                    <li style=list-style:none>
+                       <span> 商品名称：${name} </span>
+                       <span> 商品名称：${price} </span>
+                    </li>
+                `)
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+
+    li>img {
+        width: 200px;
+        height: 120px;
+    }
+
+    li {
+        display: flex;
+    }
+
+    li>div>span {
+        font-size: 20px;
+    }
+
+    .mv {
+        font-size: 35px;
+        color: #cccccc;
+    }
+</style>
+
+<body>
+
+    <script>
+        var data = {
+            code: 0,
+            default: 0,
+            message: "",
+            subcode: 0,
+            data: {
+                lan: "all",
+                sum: 50,
+                name: "",
+                mvlist: [
+                    {
+                        listennum: 179,
+                        mv_id: 1673323,
+                        mvdesc: "七穗重绎经典",
+                        mvscore: 0,
+                        mvtitle: "我的心没有回程",
+                        picurl:
+                            "http://y.gtimg.cn/music/photo_new/T015R640x360M1010049yFY13w8TNY.jpg",
+                        pub_date: "2020-12-01",
+                        publictime: "2020-12-1",
+                        singer_id: 3674853,
+                        singer_mid: "000g9xLC4IG29J",
+                        singer_name: "七穗",
+                        singerid: 3674853,
+                        singermid: "000g9xLC4IG29J",
+                        singername: "七穗",
+                        singers: [{ id: 3674853, mid: "000g9xLC4IG29J", name: "七穗" }],
+                        vid: "z0035ax8qio",
+                    },
+                    {
+                        listennum: 1153,
+                        mv_id: 1675036,
+                        mvdesc: "将快乐传递",
+                        mvscore: 0,
+                        mvtitle: "抱一抱 (《温暖的抱抱》电影宣传曲)",
+                        picurl:
+                            "http://y.gtimg.cn/music/photo_new/T015R640x360M10100080zLm1WjnmT.jpg",
+                        pub_date: "2020-12-01",
+                        publictime: "2020-12-1",
+                        singer_id: 4423,
+                        singer_mid: "000vYUqh1SqjQQ",
+                        singer_name: "华语群星",
+                        singerid: 4423,
+                        singermid: "000vYUqh1SqjQQ",
+                        singername: "华语群星",
+                        singers: [{ id: 4423, mid: "000vYUqh1SqjQQ", name: "华语群星" }],
+                        vid: "t0035lvencu",
+                    },
+                    {
+                        listennum: 502,
+                        mv_id: 1675025,
+                        mvdesc: "复古的时光记忆",
+                        mvscore: 0,
+                        mvtitle: "今晚",
+                        picurl:
+                            "http://y.gtimg.cn/music/photo_new/T015R640x360M101003nDhs64TQBPW.jpg",
+                        pub_date: "2020-12-01",
+                        publictime: "2020-12-1",
+                        singer_id: 2095617,
+                        singer_mid: "002a81Ht1RVn1m",
+                        singer_name: "陈婧霏",
+                        singerid: 2095617,
+                        singermid: "002a81Ht1RVn1m",
+                        singername: "陈婧霏",
+                        singers: [{ id: 2095617, mid: "002a81Ht1RVn1m", name: "陈婧霏" }],
+                        vid: "i0035sw6c3q",
+                    },
+                ],
+            },
+        };
+       
+        // 1:搭建静态页面
+
+        // 2:获取页面中所需要的数据
+        var list = data.data.mvlist;
+        console.log(list);
+        document.write('<ul>');
+        for (var i = 0; i < list.length; i++) {
+
+            console.log(list[i].mvlist);
+            var mvtitle = list[i].mvtitle;
+            var singer_name = list[i].singer_name;
+            var img_src = list[i].picurl;
+            document.write(`
+            <li>
+                <img src="${img_src}" alt="">
+                <div>
+                   <span>${singer_name}</span>
+                   <span class="mv">${mvtitle}</span>
+               </div>
+            </li>
+            `)
+        }
+    </script>
+</body>
+
+</html>

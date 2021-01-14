@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // obj 赋值 对象
+        // key：value 键值对的当时存在
+        // key 表示对象下属性，key一定是string类型
+        // value 属性的赋值，js的任意类型数
+        // 我们可以使用不同key值表示不同的意义
+        var obj ={
+            name:'世界',
+            xg:{
+                td:'明天更好',
+                nz:{
+                    td:{
+                        dec:'你好'
+                    }
+                }
+            }
+        }
+        // td 会不会起冲突
+
+        // obj.xxx 获取的obj 下的直接属性；
+        // ---> 无该属性===> 返回undefined 不会报错
+
+        obj.xg.td;// 获取obj下的xg对象下的td属性的值
+
+        // 总结 '点' 左边的类型全是object.
+        // 链式调用
+        obj.xg.nz.td.name;
+        // string
+
+        // bug cannt read proptype 'xp' of undefined
+        // --->ykl 为 undefined
+        obj.xg.ykl;//不报错
+        obj.xg.ykl.xp;//报错
+
+        // bug xg is not defied
+        // --->xg 变量为声明但是已经使用
+        obj[xg] 
+        //变量 
+        var xg = 'xg'
+        obj[xg] // ==> obj['xg']
+    
+    </script>
+</body>
+</html>
